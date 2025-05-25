@@ -1,0 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/24 11:17:16 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/24 15:17:08 by samatsum         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/libunit.h"
+
+void	free_test_list(t_unit_test **testlist)
+{
+	t_unit_test	*temp;
+	t_unit_test	*next;
+
+	temp = *testlist;
+	while (temp)
+	{
+		next = temp->next;
+		free(temp);
+		temp = next;
+	}
+	*testlist = NULL;
+}

@@ -6,7 +6,7 @@
 #    By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/24 12:22:16 by samatsum          #+#    #+#              #
-#    Updated: 2025/05/25 16:05:11 by samatsum         ###   ########.fr        #
+#    Updated: 2025/05/25 16:10:14 by samatsum         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ FRAMEWORK_SRCS = 	$(FRAMEWORK_SRCS_DIR)/load_test.c \
 FRAMEWORK_OBJS = $(patsubst $(FRAMEWORK_SRCS_DIR)/%.c,$(FRAMEWORK_OBJS_DIR)/%.o,$(FRAMEWORK_SRCS))
 
 # テスト関連
-TEST_SRCS_DIR = tests/test_srcs
+TEST_SRCS_DIR = tests/test_framework
 TEST_OBJS_DIR = tests/test_objs
 TEST_INCLUDES = -Itests/test_includes
 

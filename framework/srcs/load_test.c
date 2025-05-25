@@ -24,8 +24,7 @@
 
 #include "../includes/libunit.h"
 
-int	load_test(t_unit_test **testlist, char *function_name, \
-	char *name, int (*test_func)(void))
+int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*test_func)(void))
 {
 	t_unit_test	*new;
 	t_unit_test	*temp;

@@ -34,6 +34,7 @@
 #define KO -1
 #define SIGSEGV 11
 #define SIGBUS 7
+
 typedef struct s_unit_test
 {
 	char				*name;

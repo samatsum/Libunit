@@ -26,7 +26,7 @@
 
 static void	report_result(char *func_name, char *test_name, int status)
 {
-	printf("%s: %s : ", func_name, test_name);	
+	printf("%s:%s:", func_name, test_name);	
 	if (status == 0)
 		printf("[OK]\n");
 	else if (status == 255)

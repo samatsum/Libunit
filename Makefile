@@ -6,7 +6,7 @@
 #    By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/24 12:22:16 by samatsum          #+#    #+#              #
-#    Updated: 2025/05/25 14:25:29 by samatsum         ###   ########.fr        #
+#    Updated: 2025/05/25 15:57:33 by samatsum         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ FRAMEWORK_SRCS = 	$(FRAMEWORK_SRCS_DIR)/load_test.c \
 					$(FRAMEWORK_SRCS_DIR)/launch_tests.c \
 					$(FRAMEWORK_SRCS_DIR)/execute_test.c \
 					$(FRAMEWORK_SRCS_DIR)/utils.c \
-					$(FRAMEWORK_SRCS_DIR)/main.c
+					
 
 FRAMEWORK_OBJS = $(patsubst $(FRAMEWORK_SRCS_DIR)/%.c,$(FRAMEWORK_OBJS_DIR)/%.o,$(FRAMEWORK_SRCS))
 
@@ -34,6 +34,7 @@ TEST_SRCS = $(TEST_SRCS_DIR)/00_launcher.c \
 			$(TEST_SRCS_DIR)/02_ko_test.c \
 			$(TEST_SRCS_DIR)/03_sigsegv_test.c \
 			$(TEST_SRCS_DIR)/04_sigbus_test.c \
+			tests/main.c \
 
 TEST_OBJS = $(patsubst $(TEST_SRCS_DIR)/%.c,$(TEST_OBJS_DIR)/%.o,$(TEST_SRCS))
 

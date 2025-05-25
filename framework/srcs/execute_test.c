@@ -26,15 +26,18 @@
 
 static void	report_result(char *func_name, char *test_name, int status)
 {
-	printf("%s:%s:", func_name, test_name);	
+	ft_putstr(func_name);
+	ft_putstr(":");
+	ft_putstr(test_name);
+	ft_putstr(":");
 	if (status == 0)
-		printf("[OK]\n");
+		ft_putstr("[OK]\n");
 	else if (status == 255)
-		printf("[KO]\n");
+		ft_putstr("[KO]\n");
 	else if (status == SIGSEGV)
-		printf("[SEGV]\n");
+		ft_putstr("[SEGV]\n");
 	else if (status == SIGBUS)
-		printf("[BUS]\n");
+		ft_putstr("[BUS]\n");
 }
 
 int	execute_test(t_unit_test *test)

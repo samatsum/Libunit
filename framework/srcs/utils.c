@@ -3,18 +3,6 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/25 14:00:35 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 14:00:35 by samatsum         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
 /*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 11:17:16 by samatsum          #+#    #+#             */
@@ -37,4 +25,29 @@ void	free_test_list(t_unit_test **testlist)
 		temp = next;
 	}
 	*testlist = NULL;
+}
+
+static int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
+
+void	ft_putnbr(int n)
+{
+	char	c;
+
+	if (n >= 10)
+		ft_putnbr(n / 10);
+	c = (n % 10) + '0';
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	write(1, str, ft_strlen(str));
 }

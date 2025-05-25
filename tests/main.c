@@ -20,3 +20,4 @@ int	main(void)
 	result |= framework_test_launcher();
 	return (result);
 }
+

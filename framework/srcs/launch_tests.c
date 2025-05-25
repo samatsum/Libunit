@@ -24,6 +24,14 @@
 
 #include "../includes/libunit.h"
 
+static void	print_summary(int success, int total)
+{
+	ft_putnbr(success);
+	ft_putstr("/");
+	ft_putnbr(total);
+	ft_putstr(" tests checked\n");
+}
+
 int	launch_tests(t_unit_test **testlist)
 {
 	t_unit_test	*current;
@@ -42,7 +50,7 @@ int	launch_tests(t_unit_test **testlist)
 		total++;
 		current = current->next;
 	}
-	printf("%d/%d tests checked\n", success, total);
+	print_summary(success, total);
 	free_test_list(testlist);
 	if (success == total)
 		return (OK);

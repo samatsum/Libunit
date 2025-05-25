@@ -53,6 +53,7 @@ int		execute_test(t_unit_test *test);
 
 /* ユーティリティ関数 */
 void	free_test_list(t_unit_test **testlist);
-
+void	ft_putstr(char *str);
+void	ft_putnbr(int n);
 
 #endif

@@ -45,7 +45,7 @@ int	execute_test(t_unit_test *test)
 
 	pid = fork();
 	if (pid < 0)
-		return (-1);
+		return (KO);
 	else if (pid == 0)
 	{
 		result = test->function();
@@ -63,8 +63,8 @@ int	execute_test(t_unit_test *test)
 		else if (WIFSIGNALED(status))
 		{
 			report_result(test->function_name, test->name, WTERMSIG(status));
-			return (-1);
+			return (KO);
 		}
 	}
-	return (-1);
+	return (KO);
 }

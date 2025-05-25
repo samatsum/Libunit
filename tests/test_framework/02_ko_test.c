@@ -6,7 +6,7 @@
 /*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 14:08:41 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 14:13:21 by samatsum         ###   ########.fr       */
+/*   Updated: 2025/05/25 16:36:10 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ko_test(void)
 	a = 42;
 	b = 24;
 	if (a == b)
-		return (0);
+		return (OK);
 	else
-		return (-1);
+		return (KO);
 }

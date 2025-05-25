@@ -6,7 +6,7 @@
 /*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 14:08:21 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 14:13:06 by samatsum         ###   ########.fr       */
+/*   Updated: 2025/05/25 16:37:00 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ok_test(void)
 	a = 42;
 	b = 42;
 	if (a == b)
-		return (0);
+		return (OK);
 	else
-		return (-1);
+		return (KO);
 }

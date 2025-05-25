@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   04_sigbus_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
+/*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 14:09:04 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 14:10:43 by samatsum         ###   ########.fr       */
+/*   Updated: 2025/05/25 16:37:25 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int sigbus_test(void)
 {
-    return (0);
+    return (OK);
 }

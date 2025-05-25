@@ -24,14 +24,15 @@
 
 #include "../includes/libunit.h"
 
-int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*test_func)(void))
+int	load_test(t_unit_test **testlist, char *function_name, \
+	char *name, int (*test_func)(void))
 {
 	t_unit_test	*new;
 	t_unit_test	*temp;
 
 	new = (t_unit_test *)malloc(sizeof(t_unit_test));
 	if (!new)
-		return (-1);
+		return (KO);
 	new->name = name;
 	new->function_name = function_name;
 	new->function = test_func;
@@ -39,11 +40,11 @@ int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*tes
 	if (*testlist == NULL)
 	{
 		*testlist = new;
-		return (0);
+		return (OK);
 	}
 	temp = *testlist;
 	while (temp->next)
 		temp = temp->next;
 	temp->next = new;
-	return (0);
+	return (OK);
 }

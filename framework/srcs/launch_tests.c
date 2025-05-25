@@ -37,7 +37,7 @@ int	launch_tests(t_unit_test **testlist)
 	while (current)
 	{
 		result = execute_test(current);
-		if (result == 0)
+		if (result == OK)
 			success++;
 		total++;
 		current = current->next;

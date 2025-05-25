@@ -6,7 +6,7 @@
 /*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/25 14:08:51 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 14:12:16 by samatsum         ###   ########.fr       */
+/*   Updated: 2025/05/25 16:37:06 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ int	sigsegv_test(void)
 
 	ptr = NULL;
 	*ptr = 42;
-	return (0);
+	return (OK);
 }

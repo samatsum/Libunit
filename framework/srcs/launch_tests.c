@@ -3,6 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/25 14:00:35 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:00:35 by samatsum         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   launch_tests.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
 /*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 11:17:16 by samatsum          #+#    #+#             */
@@ -33,6 +45,6 @@ int	launch_tests(t_unit_test **testlist)
 	printf("%d/%d tests checked\n", success, total);
 	free_test_list(testlist);
 	if (success == total)
-		return (0);
-	return (-1);
+		return (OK);
+	return (KO);
 }

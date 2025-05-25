@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_segfault_test.c                                 :+:      :+:    :+:   */
+/*   01_ok_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
+/*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/24 13:22:18 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/24 15:15:53 by samatsum         ###   ########.fr       */
+/*   Created: 2025/05/25 14:08:21 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:13:06 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../test_includes/test.h"
+#include "../test_includes/test.h"
 
-int	segfault_test(void)
+int	ok_test(void)
 {
-	if (1)
+	int	a;
+	int	b;
+
+	a = 42;
+	b = 42;
+	if (a == b)
 		return (0);
 	else
 		return (-1);

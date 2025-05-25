@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_basic_test.c                                    :+:      :+:    :+:   */
+/*   04_sigbus_test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
+/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/24 13:22:04 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/24 15:15:55 by samatsum         ###   ########.fr       */
+/*   Created: 2025/05/25 14:09:04 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:10:43 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../test_includes/test.h"
+#include "../test_includes/test.h"
 
-int	basic_test(void)
+int sigbus_test(void)
 {
-	if (strlen("Hello") == 5)
-		return (0);
-	else
-		return (-1);
+    return (0);
 }

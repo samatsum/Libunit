@@ -6,23 +6,23 @@
 /*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 13:21:56 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/25 13:57:19 by samatsum         ###   ########.fr       */
+/*   Updated: 2025/05/25 14:19:24 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../test_includes/test.h"
-#include "../../../framework/includes/libunit.h"
+#include "../test_includes/test.h"
+#include "../../framework/includes/libunit.h"
 
-int	strlen_launcher(void)
+int	framework_test_launcher(void)
 {
-	char		*test_func_name;
 	t_unit_test	*testlist;
+	char		*test_function_name;
 
 	testlist = NULL;
-	test_func_name = "STRLEN";
-	load_test(&testlist, test_func_name, "Basic test", &basic_test);
-	load_test(&testlist, test_func_name, "NULL test", &null_test);
-	load_test(&testlist, test_func_name, "Segmentation fault test", &segfault_test);
-	load_test(&testlist, test_func_name, "Bus error test", &bus_error_test);
+	test_function_name = "FRAMEWORK";
+	load_test(&testlist, test_function_name, "OK test", &ok_test);
+	load_test(&testlist, test_function_name, "KO test", &ko_test);
+	load_test(&testlist, test_function_name, "SIGSEGV test", &sigsegv_test);
+	load_test(&testlist, test_function_name, "SIGBUS test", &sigbus_test);
 	return (launch_tests(&testlist));
 }

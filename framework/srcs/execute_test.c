@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   execute_test.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/25 14:00:35 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:00:35 by samatsum         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -17,7 +29,7 @@ static void	report_result(char *func_name, char *test_name, int status)
 	printf("%s: %s : ", func_name, test_name);	
 	if (status == 0)
 		printf("[OK]\n");
-	else if (status == -1)
+	else if (status == 255)
 		printf("[KO]\n");
 	else if (status == SIGSEGV)
 		printf("[SEGV]\n");

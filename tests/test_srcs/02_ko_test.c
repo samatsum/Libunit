@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_bus_error_test.c                                :+:      :+:    :+:   */
+/*   02_ko_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
+/*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/24 13:22:25 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/24 15:15:51 by samatsum         ###   ########.fr       */
+/*   Created: 2025/05/25 14:08:41 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:13:21 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../test_includes/test.h"
+#include "../test_includes/test.h"
 
-int	bus_error_test(void)
+int	ko_test(void)
 {
-	if (1)
+	int	a;
+	int	b;
+
+	a = 42;
+	b = 24;
+	if (a == b)
 		return (0);
 	else
 		return (-1);

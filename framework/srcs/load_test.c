@@ -3,6 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   load_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
+/*   By: samatsum  <zunandkun@gmail.com      >      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/25 14:00:35 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:00:35 by samatsum         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   load_test.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
 /*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 11:17:16 by samatsum          #+#    #+#             */
@@ -12,7 +24,8 @@
 
 #include "../includes/libunit.h"
 
-int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*test_func)(void))
+int	load_test(t_unit_test **testlist, char *function_name, \
+	char *name, int (*test_func)(void))
 {
 	t_unit_test	*new;
 	t_unit_test	*temp;
@@ -21,7 +34,7 @@ int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*tes
 	if (!new)
 		return (-1);
 	new->name = name;
-	new->function_name = function_name;  // 追加
+	new->function_name = function_name;
 	new->function = test_func;
 	new->next = NULL;
 	if (*testlist == NULL)

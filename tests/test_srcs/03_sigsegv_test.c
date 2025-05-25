@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_null_test.c                                     :+:      :+:    :+:   */
+/*   03_sigsegv_test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samatsum  <samatsum@student.42.jp   >      +#+  +:+       +#+        */
+/*   By: samatsum <samatsum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/24 13:22:11 by samatsum          #+#    #+#             */
-/*   Updated: 2025/05/24 15:15:54 by samatsum         ###   ########.fr       */
+/*   Created: 2025/05/25 14:08:51 by samatsum          #+#    #+#             */
+/*   Updated: 2025/05/25 14:12:16 by samatsum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../test_includes/test.h"
+#include "../test_includes/test.h"
 
-int	null_test(void)
+int	sigsegv_test(void)
 {
-	if (1)
-		return (0);
-	else
-		return (-1);
+	int	*ptr;
+
+	ptr = NULL;
+	*ptr = 42;
+	return (0);
 }

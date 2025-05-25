@@ -24,7 +24,7 @@ int	launch_tests(t_unit_test **testlist)
 	current = *testlist;
 	while (current)
 	{
-		result = execute_test("TEST", current);
+		result = execute_test(current);
 		if (result == 0)
 			success++;
 		total++;

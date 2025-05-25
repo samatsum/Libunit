@@ -25,7 +25,7 @@ static void	report_result(char *func_name, char *test_name, int status)
 		printf("[BUS]\n");
 }
 
-int	execute_test(char *func_name, t_unit_test *test)
+int	execute_test(t_unit_test *test)
 {
 	pid_t	pid;
 	int		status;
@@ -45,12 +45,12 @@ int	execute_test(char *func_name, t_unit_test *test)
 		if (WIFEXITED(status))
 		{
 			result = WEXITSTATUS(status);
-			report_result(func_name, test->name, result);
+			report_result(test->function_name, test->name, result);
 			return (result);
 		}
 		else if (WIFSIGNALED(status))
 		{
-			report_result(func_name, test->name, WTERMSIG(status));
+			report_result(test->function_name, test->name, WTERMSIG(status));
 			return (-1);
 		}
 	}

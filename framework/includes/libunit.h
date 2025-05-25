@@ -21,18 +21,20 @@
 typedef struct s_unit_test
 {
 	char				*name;
+	char				*function_name;  // 追加
 	int					(*function)(void);
 	struct s_unit_test	*next;
 }	t_unit_test;
 
 /* テスト管理関数 */
-int		load_test(t_unit_test **testlist, char *name, int (*test_func)(void));
+int		load_test(t_unit_test **testlist, char *function_name, char *name, int (*test_func)(void));
 int		launch_tests(t_unit_test **testlist);
 
 /* テスト実行関数 */
-int		execute_test(char *func_name, t_unit_test *test);
+int		execute_test(t_unit_test *test);
 
 /* ユーティリティ関数 */
 void	free_test_list(t_unit_test **testlist);
+
 
 #endif

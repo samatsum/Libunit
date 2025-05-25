@@ -12,7 +12,7 @@
 
 #include "../includes/libunit.h"
 
-int	load_test(t_unit_test **testlist, char *name, int (*test_func)(void))
+int	load_test(t_unit_test **testlist, char *function_name, char *name, int (*test_func)(void))
 {
 	t_unit_test	*new;
 	t_unit_test	*temp;
@@ -21,6 +21,7 @@ int	load_test(t_unit_test **testlist, char *name, int (*test_func)(void))
 	if (!new)
 		return (-1);
 	new->name = name;
+	new->function_name = function_name;  // 追加
 	new->function = test_func;
 	new->next = NULL;
 	if (*testlist == NULL)
